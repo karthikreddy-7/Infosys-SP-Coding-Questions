@@ -5,14 +5,11 @@ import java.util.Comparator;
 
 public class LargestNumber {
     public static void main(String[] args) {
-        String[] arr = { "3", "30", "34", "5", "9" };
+        String[] arr = { "3", "30", "34", "5", "2" };
         Comparator<String> com = new Comparator<String>() {
             public int compare(String a, String b) {
                 String ab = a + b;
                 String ba = b + a;
-                System.out.println(ab);
-                System.out.println(ba);
-                System.out.println(ab.compareTo(ba));
                 return ab.compareTo(ba) > 0 ? -1 : 1;
             }
         };
